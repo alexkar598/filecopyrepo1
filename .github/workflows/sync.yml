@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: kbrashears5/github-action-file-sync@v2.0.0
+      - uses: kbrashears5/github-action-file-sync@e2715cb544edee3eff1aae1efbca9be0136e276f
         with:
           REPOSITORIES: |
             alexkar598/filecopyrepo2@master
