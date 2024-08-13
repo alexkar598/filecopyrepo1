@@ -1,0 +1,19 @@
+name: File sync
+
+on:
+  push:
+    branches: [ "master" ]
+    paths: "fileToSync"
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: kbrashears5/github-action-file-sync@v2.0.0
+        with:
+          REPOSITORIES: |
+            alexkar598/filecopyrepo2@master
+          FILES: |
+            fileToSync=syncedFile
+          TOKEN: ${{ secrets.SYNC_SECRET }}
