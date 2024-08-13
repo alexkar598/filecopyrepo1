@@ -17,3 +17,5 @@ jobs:
           FILES: |
             fileToSync=syncedFile
           TOKEN: ${{ secrets.SYNC_SECRET }}
+          GIT_USERNAME: SpaceManiac/SpacemanDMM
+          GIT_EMAIL: action@github.com
